@@ -7,7 +7,13 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+	"start": "node server.js",
+    "heroku-postbuild": "ng build --prod"
+  },
+  "engines": {
+    "node": "10.16.0",
+    "npm": "6.9.0"
   },
   "private": true,
   "dependencies": {
@@ -15,6 +21,7 @@
     "@angular/cdk": "^8.2.3",
     "@angular/common": "~8.1.2",
     "@angular/compiler": "~8.1.2",
+	"@angular/compiler-cli": "~8.1.2",
     "@angular/core": "~8.1.2",
     "@angular/forms": "~8.1.2",
     "@angular/material": "^8.2.3",
@@ -33,6 +40,7 @@
     "ng5-slider": "^1.2.4",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
+	"typescript": "~3.4.3",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
