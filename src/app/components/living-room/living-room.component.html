@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>Actual temperature: {{actual}}</h1>
+    <h1>Goal temperature: {{goal}}</h1>
+    <ng5-slider [(value)]="goal" [options]="options"></ng5-slider>
+
+
+    <form (ngSubmit)="save()">
+        <!-- <input type="text" class="form-control" placeholder="temp" name="temp"
+                                [(ngModel)]="goal"> -->
+        <button class="btn btn-success m-1" type="submit" (click)="openModal('custom-modal-1')"> Submit </button>
+    </form>
+
+    <jw-modal id="custom-modal-1">
+        <h1>Temperature is set to {{goal}} degrees</h1>
+        <button (click)="closeModal('custom-modal-1');">Close</button>
+    </jw-modal>
+</div>

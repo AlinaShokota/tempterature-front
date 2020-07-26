@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Actual temperature: {{actual}}</h1>
+    <h1>Goal temperature: {{goal}}</h1>
+    <ng5-slider [(value)]="goal" [options]="options"></ng5-slider>
+    <button (click)="setGoal()" type="button" class="btn btn-primary">Set this temperature</button>
+    
+</div>
+
+
+
