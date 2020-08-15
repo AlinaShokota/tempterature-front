@@ -5,7 +5,31 @@
   img {
     height: 300px;
     display: block;
-    display: block;
   margin-left: auto;
   margin-right: auto;
+  padding: 5%;
+  }
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 3px;
+    font-family: "Lucida Console", Courier, monospace;
+  }
+
+  div.polaroid {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    margin: 4%;
+  }
+  
+  div.container {
+    text-align: center;
+    padding: 10px 20px;
+    color: black;
   }
