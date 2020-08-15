@@ -11,8 +11,11 @@ import { ModalService } from '../../_modal';
 export class LivingRoomComponent implements OnInit {
   constructor(private livingRoomService: LivingRoomService, private modalService: ModalService) { }
 
-  actual: Number = 0;
-  goal: Number = 0;
+  // actual: Number = 0;
+  // goal: Number = 0;
+
+  actual: Number = 20;
+  goal: Number = this.actual;
 
   ngOnInit() {
     this.livingRoomService.get().subscribe(value => {
