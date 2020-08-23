@@ -29,7 +29,7 @@ export class LivingRoomComponent implements OnInit {
   save(){
     console.log("this.goal "+ this.goal);
     this.livingRoomService.set(this.goal).subscribe(value => {
-      
+      console.log("saved temp " + this.goal + " degrees")
     });
   }
 
