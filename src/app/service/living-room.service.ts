@@ -11,11 +11,11 @@ export class LivingRoomService {
 
   set(temperature: Number): Observable<Object> {
     console.log("LivingRoomService "+temperature)
-    return this.http.post('http://localhost:8080/setTemp/save', temperature);
+    return this.http.post('https://change-temp.herokuapp.com/setTemp/save', temperature);
   }
 
   get(): Observable<Number> {
-    return this.http.get<Number>('http://localhost:8080/data/latest');
+    return this.http.get<Number>('https://change-temp.herokuapp.com/data/latest');
   }
 
 }
