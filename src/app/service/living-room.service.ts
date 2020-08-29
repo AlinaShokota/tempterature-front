@@ -18,4 +18,8 @@ export class LivingRoomService {
     return this.http.get<Number>('https://change-temp.herokuapp.com/data/latest');
   }
 
+  getLatestGoal(): Observable<Number> {
+    return this.http.get<Number>('https://change-temp.herokuapp.com/setTemp/latest');
+  }
+
 }

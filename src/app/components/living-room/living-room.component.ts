@@ -14,15 +14,17 @@ export class LivingRoomComponent implements OnInit {
   // actual: Number = 0;
   // goal: Number = 0;
 
-  actual: Number = 20;
-  goal: Number = this.actual;
+  actual: Number;
+  goal: Number;
 
   ngOnInit() {
     this.livingRoomService.get().subscribe(value => {
       this.actual = value;
-      this.goal = value;
-      console.log("this.actual "+ this.actual);
-      console.log("this.goal "+ this.goal);
+      console.log("actual "+ this.actual);
+      this.livingRoomService.getLatestGoal().subscribe(value => {
+        this.goal = value;
+        console.log("goallll "+ this.goal);
+      })
     });
   }
 
@@ -43,16 +45,16 @@ closeModal(id: string) {
 
   options: Options = {
     floor: 0,
-    ceil: 30,
+    ceil: 40,
     showSelectionBar: true,
     getSelectionBarColor: (goal): string => {
-      if (goal <= 15) {
+      if (goal <= 10) {
           return 'blue';
       }
       if (goal <= 20) {
           return 'yellow';
       }
-      if (goal <= 25) {
+      if (goal <= 30) {
           return 'orange';
       }
       return 'red';
